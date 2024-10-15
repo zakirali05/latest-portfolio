@@ -1,101 +1,125 @@
-import Image from "next/image";
-
-export default function Home() {
+"use client";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+const LandingPage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="flex flex-col items-center justify-center h-screen gap-3 ">
+      <motion.h1
+        initial={{
+          y: "10px",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: "0px",
+          opacity: 100,
+        }}
+        viewport={{ once: true }}
+        // transition={{ duration: 0.3 }}
+        className="bg-gradient-to-r from-blue-600  to-indigo-400  inline-block text-transparent bg-clip-text   text-3xl sm:text-4xl  lg:text-5xl xl:text-6xl 2xl:text-7xl font-[900]"
+      >
+        ZakirAli
+      </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      <motion.p
+        initial={{
+          y: "10px",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: "0px",
+          opacity: 100,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.1 }}
+        className=" text-white/40 font-[500]   w-[90%] md:w-[60%] lg:w-[40%] text-center"
+      >
+        Results-oriented full-stack web developer with a strong eye for design
+        and a focus on building robust, optimised web applications. Proficient
+        in modern technologies and frameworks.
+      </motion.p>
+      <motion.div
+        initial={{
+          y: "10px",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: "0px",
+          opacity: 100,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.2 }}
+        className="flex items-center justify-center gap-2"
+      >
+        <SocialIcon
+          style={{ width: "30px", height: "30px" }}
+          bgColor="#282A2C"
+          url="https://www.linkedin.com/in/zakirali-dhuka-baab89259/"
+          target="_blank"
+          className="hover:opacity-20 cursor-pointer"
+        />
+        <SocialIcon
+          style={{ width: "30px", height: "30px" }}
+          bgColor="#282A2C"
+          url="https://x.com/zakirali_05"
+          target="_blank"
+          className="hover:opacity-20 cursor-pointer"
+        />
+        <SocialIcon
+          style={{ width: "30px", height: "30px" }}
+          bgColor="#282A2C"
+          url="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRqhkhDlfvzvcRqcFTtwLpDTnPwHMkHHxXzhhpNFvLMlHXDxzftwmMwpFZnRfBqckFnRpqQ"
+          target="_blank"
+          className="hover:opacity-20 cursor-pointer"
+        />
+        <SocialIcon
+          style={{ width: "30px", height: "30px" }}
+          bgColor="#282A2C"
+          url="https://github.com/zakirali05"
+          target="_blank"
+          className="hover:opacity-20 cursor-pointer"
+        />
+      </motion.div>
+      <motion.div
+        initial={{
+          y: "10px",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: "0px",
+          opacity: 100,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        className="flex items-center justify-center gap-2 "
+      >
+        <Button variant={"custom"}>
+          <a href="/resume.pdf" download>
+            Download Resume
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </Button>
+        <Button variant={"custom_inverse"}>
+          <Link href={"/hire-me"}>Hire Me!</Link>
+        </Button>
+      </motion.div>
+      <motion.div
+        initial={{
+          // y: "10px",
+          width: "0px",
+          opacity: 0,
+        }}
+        whileInView={{
+          // y: "0px",
+          width: "300px",
+          opacity: 100,
+        }}
+        viewport={{ once: true }}
+        // transition={{ duration: 0.4 }}
+        className="h-1 w-[300px] my-5 border-t border-white/30"
+      />
+    </main>
   );
-}
+};
+
+export default LandingPage;
