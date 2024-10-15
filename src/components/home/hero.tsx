@@ -10,7 +10,7 @@ const Hero = () => {
     <main className="flex flex-col items-center justify-center h-screen gap-3 ">
       <motion.h1
         initial={{
-          y: "10px",
+          y: "30px",
           opacity: 0,
         }}
         whileInView={{
@@ -18,14 +18,15 @@ const Hero = () => {
           opacity: 100,
         }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-blue-600  to-indigo-400  inline-block text-transparent bg-clip-text   text-3xl sm:text-4xl  lg:text-5xl xl:text-6xl 2xl:text-7xl font-[900]"
+        transition={{ duration: 0.3 }}
+        className="bg-gradient-to-r from-blue-600  to-indigo-400  inline-block text-transparent bg-clip-text   text-4xl  lg:text-5xl xl:text-6xl 2xl:text-7xl font-[900]"
       >
         {PORTFOLIO_DATA.landing_page.hero.name}
       </motion.h1>
 
       <motion.p
         initial={{
-          y: "10px",
+          y: "30px",
           opacity: 0,
         }}
         whileInView={{
@@ -33,14 +34,14 @@ const Hero = () => {
           opacity: 100,
         }}
         viewport={{ once: true }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
         className=" text-white/40 font-[500]   w-[90%] md:w-[60%] lg:w-[40%] text-center"
       >
         {PORTFOLIO_DATA.landing_page.hero.description}
       </motion.p>
       <motion.div
         initial={{
-          y: "10px",
+          y: "30px",
           opacity: 0,
         }}
         whileInView={{
@@ -48,7 +49,7 @@ const Hero = () => {
           opacity: 100,
         }}
         viewport={{ once: true }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
         className="flex items-center justify-center gap-2"
       >
         {PORTFOLIO_DATA.landing_page.hero.socials.map((url) => (
@@ -64,7 +65,7 @@ const Hero = () => {
       </motion.div>
       <motion.div
         initial={{
-          y: "10px",
+          y: "30px",
           opacity: 0,
         }}
         whileInView={{
@@ -72,7 +73,7 @@ const Hero = () => {
           opacity: 100,
         }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.3, delay: 0.3 }}
         className="flex items-center justify-center gap-2 "
       >
         <Button variant={"custom"}>
@@ -96,6 +97,7 @@ const Hero = () => {
           opacity: 100,
         }}
         viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
         className="h-1 w-[300px] my-5 border-t border-white/30"
       />
     </main>
